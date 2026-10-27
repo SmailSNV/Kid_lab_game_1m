@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مخبر العالم الصغير – علوم الطبيعة، السنة الأولى متوسط</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1f2a63;--or:#ff8a3d;--pu:#7a5cff;--gr:#2fd27a;--pk:#ff5fa2;--sun:#ffc93c;--mute:#5a6797;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100vh;font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;background:linear-gradient(#6fd6ff,#e6f9ff 55%,#fff4c9);color:var(--ink);line-height:1.6;overflow-x:hidden}
+.wrap{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:14px 14px 40px}
+.fl{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.fl span{position:absolute;bottom:-60px;font-size:2rem;opacity:.5;animation:fly 12s linear infinite}
+@keyframes fly{to{transform:translateY(-115vh) rotate(40deg)}}
+h1{font-size:2.1rem;font-weight:900;margin:0;line-height:1.25;color:#4b2fd1;text-shadow:0 3px 0 #fff}
+.hero{display:flex;align-items:center;gap:10px}
+.mas{width:92px;flex:none;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-3deg)}}
+.sub{margin:.2em 0 .8em;font-weight:700}
+.big{display:flex;gap:12px;align-items:center;width:100%;text-align:right;border:0;border-radius:24px;padding:16px;margin-bottom:12px;font:inherit;color:#fff;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.18)}
+.big:active{transform:translateY(3px)}.big .ic{font-size:2.8rem;animation:bob 2.4s infinite}
+.big strong{display:block;font-size:1.3rem;font-weight:900}.big span{font-size:.9rem}
+.sec{font-weight:900;margin:16px 0 8px}
+.lv{display:flex;gap:12px;align-items:center;width:100%;text-align:right;background:#fff;color:var(--ink);border:0;border-radius:18px;padding:10px 14px;margin-bottom:10px;font:inherit;cursor:pointer;border-inline-start:8px solid var(--c);box-shadow:0 3px 0 #c9d6ff}
+.lv .ic{font-size:1.8rem}.lv strong{display:block;font-weight:900}.lv span{font-size:.85rem;color:var(--mute)}.lv .best{margin-inline-start:auto;font-weight:900;white-space:nowrap}
+.name{width:100%;padding:11px 14px;border-radius:14px;border:3px solid #fff;background:#ffffffcc;color:var(--ink);font:inherit;margin-bottom:12px}
+.name:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--pu);outline-offset:2px}
+.by{margin-top:22px;text-align:center;font-size:.95rem;font-weight:700}.by b{color:#4b2fd1}
+.top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:900}
+.btn,.next{display:block;width:100%;margin-top:12px;padding:13px;border:0;border-radius:16px;background:var(--or);color:#fff;font:inherit;font-weight:900;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 0 #c4631b}
+.btn.alt{background:#fff;color:var(--ink);box-shadow:0 3px 0 #c9d6ff}.small{width:auto;margin:0;padding:6px 14px;font-size:.95rem}
+.bar{height:12px;background:#fff;border-radius:9px;margin:10px 0 14px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--gr);transition:width .3s}
+.q{background:#fff;border-radius:24px;padding:18px 14px;text-align:center;box-shadow:0 4px 0 #c9d6ff}
+.q .e{font-size:4rem;line-height:1.1}.q h2{margin:.2em 0 0;font-size:1.25rem;font-weight:900}.q p{margin:.2em 0 0;color:var(--mute);font-weight:700}
+.opts{display:grid;gap:10px;margin-top:12px}
+.opt{font:inherit;font-weight:900;font-size:1.05rem;padding:14px;border-radius:16px;border:0;background:#fff;color:var(--ink);cursor:pointer;box-shadow:0 4px 0 #c9d6ff}
+.opt.ok{background:var(--gr);color:#fff;box-shadow:0 4px 0 #1c9c57}.opt.no{background:var(--pk);color:#fff;box-shadow:0 4px 0 #c43a76;animation:sh .35s}
+@keyframes sh{25%{transform:translateX(7px)}75%{transform:translateX(-7px)}}
+.fb{margin-top:12px;padding:12px 14px;border-radius:16px;background:#fff8d6;font-weight:700}
+.end{text-align:center}.end .stars{font-size:3rem}.end .num{font-size:3rem;font-weight:900;color:var(--or);line-height:1.2}
+.hid{display:none!important}
+/* المخبر */
+.mrow{display:flex;align-items:center;gap:8px;margin:8px 0}
+.mrow .mas{width:70px}
+.bub{position:relative;flex:1;background:#fff;border-radius:18px;padding:8px 12px;font-weight:700;font-size:.95rem;box-shadow:0 3px 0 #c9d6ff}
+.bub::before{content:"";position:absolute;right:-8px;top:50%;margin-top:-8px;border:8px solid transparent;border-left-color:#fff;border-right:0}
+.bench{background:linear-gradient(#fff,#eaf3ff);border:4px solid #fff;border-radius:24px;min-height:250px;display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 4px 0 #c9d6ff}
+.rig{position:relative;width:150px;height:240px}
+.tube{position:absolute;left:40px;bottom:46px;width:70px;height:150px;border:4px solid #8aa0d8;border-top-color:transparent;border-radius:0 0 36px 36px;overflow:hidden;background:#ffffff88}
+.liq{position:absolute;inset:auto 0 0 0;height:70%;transition:background 1.2s}
+.ppt{position:absolute;inset:auto 0 0 0;height:0;transition:height 1.4s}
+.fd{position:absolute;bottom:4px;inset-inline:0;text-align:center;font-size:1.6rem}
+.pour{position:absolute;top:0;left:60px;font-size:2.6rem;transform-origin:bottom left;animation:tilt 1.5s ease-in-out forwards}
+@keyframes tilt{0%{transform:rotate(0)}30%,70%{transform:rotate(-70deg) translateY(-6px)}100%{transform:rotate(0)}}
+.drops i{position:absolute;left:68px;top:46px;width:10px;height:14px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--dc,#7a5cff);opacity:0;animation:fall .6s ease-in infinite;animation-delay:.4s}
+.drops i:nth-child(2){animation-delay:.7s}.drops i:nth-child(3){animation-delay:1s}
+@keyframes fall{0%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(110px)}}
+.flame{position:absolute;left:52px;bottom:0;font-size:3rem;animation:fl .35s ease-in-out infinite alternate;transform-origin:bottom}
+@keyframes fl{to{transform:scale(1.2,.9) rotate(4deg)}}
+.steam i{position:absolute;left:55px;bottom:150px;font-style:normal;font-size:1.6rem;opacity:0;animation:rise 1.4s ease-out infinite}
+.steam i:nth-child(2){left:75px;animation-delay:.4s}.steam i:nth-child(3){left:40px;animation-delay:.8s}
+@keyframes rise{0%{opacity:.9;transform:translateY(0)}100%{opacity:0;transform:translateY(-70px) scale(1.5)}}
+.sheet{width:150px;height:170px;background:#efe6cf;border-radius:8px;position:relative;box-shadow:0 4px 0 #cdbf98;overflow:hidden}
+.spot{position:absolute;inset:55px 38px;border-radius:50%;background:#fff6b8;box-shadow:0 0 18px 8px #fff6b8;opacity:0;transition:opacity 1.2s 1.2s}
+.rub{position:absolute;top:60px;left:30px;font-size:2.4rem;animation:rb .5s ease-in-out 3 alternate}
+@keyframes rb{to{transform:translateX(70px) rotate(20deg)}}
+.pop{position:fixed;z-index:50;font-size:1.8rem;pointer-events:none;animation:pp 1.1s ease-out forwards}
+@keyframes pp{to{transform:translate(var(--x),var(--y)) rotate(360deg);opacity:0}}
+.foods{display:flex;gap:8px;overflow-x:auto;padding:12px 2px 6px;scroll-snap-type:x proximity}
+.fc{flex:none;width:76px;background:#fff;border:3px solid #fff;border-radius:16px;padding:6px 2px;text-align:center;font:inherit;font-size:.78rem;font-weight:900;color:var(--ink);cursor:pointer;box-shadow:0 3px 0 #c9d6ff;scroll-snap-align:start}
+.fc b{display:block;font-size:1.9rem;line-height:1.2}.fc.on{border-color:var(--pu);background:#efe9ff}
+.shelf{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.rg{font:inherit;font-weight:900;font-size:.92rem;color:#fff;border:0;border-radius:14px;padding:10px 6px;cursor:pointer;background:var(--bc);box-shadow:0 4px 0 rgba(0,0,0,.2);text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.rg:active{transform:translateY(3px)}.rg:disabled{opacity:.5}
+.nb{list-style:none;margin:10px 0 0;padding:8px 12px;background:#fff;border-radius:16px;font-size:.9rem;font-weight:700;box-shadow:0 3px 0 #c9d6ff}
+.nb:empty::before{content:"دفتر المخبر فارغ… ابدأ التجارب! 📒";color:var(--mute)}
+.nb li{padding:3px 0;border-bottom:1px dashed #c9d6ff}.nb li:last-child{border:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.chips span{background:var(--gr);color:#fff;border-radius:20px;padding:2px 12px;font-weight:900;font-size:.88rem}
+.chk label{display:block;background:#fff;border-radius:14px;padding:9px 12px;margin-top:8px;font-weight:900;box-shadow:0 3px 0 #c9d6ff}
+.chk input{width:22px;height:22px;margin-inline-end:10px;vertical-align:middle;accent-color:var(--gr)}
+.secs{display:flex;gap:8px;margin-bottom:10px}.secs button{flex:1;padding:12px 4px;border:3px solid #fff;border-radius:14px;background:#fff;font:inherit;font-weight:900;color:var(--ink);cursor:pointer;box-shadow:0 3px 0 #c9d6ff}.secs button.on{border-color:var(--pu);background:#efe9ff}
+.who{font-weight:900;margin-bottom:10px}.chg{font:inherit;border:0;background:none;color:var(--pu);font-weight:900;text-decoration:underline;cursor:pointer}
+.tbl{width:100%;border-collapse:collapse;background:#fff;font-size:.85rem;font-weight:700}.tbl th,.tbl td{padding:6px 8px;border-bottom:1px solid #dfe6ff;text-align:center;white-space:nowrap}.tbl th{background:#efe9ff}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.wrap{padding-top:58px}
+#mute{position:fixed;top:calc(env(safe-area-inset-top,0px) + 8px);left:10px;z-index:60;width:44px;height:44px;border-radius:50%;border:3px solid #fff;background:#fff;font-size:1.3rem;cursor:pointer;box-shadow:0 3px 0 #c9d6ff}
+
+.plus1{display:inline-block;background:var(--sun);color:#4b2fd1;border-radius:20px;padding:1px 12px;font-weight:900;font-size:1rem;margin-inline-start:6px;box-shadow:0 2px 0 #c99a00;animation:pls 1.2s ease-in-out infinite}
+@keyframes pls{50%{transform:scale(1.18) rotate(-4deg)}}
+.promo{background:#fff8d6;border:3px dashed var(--or);border-radius:16px;padding:10px 12px;margin-bottom:12px;font-weight:900;text-align:center}
+.opt.sel{background:#efe9ff;outline:3px solid var(--pu);outline-offset:-3px}
+.next:disabled{opacity:.45;box-shadow:none;cursor:not-allowed}
+.rev{text-align:right;margin-top:10px}.rev .fb{margin-top:8px;background:#ffe9f1}
+</style>
+</head>
+<body>
+<div class="fl" id="fl"></div>
+<button id="mute" aria-label="الصوت">🔊</button>
+<div class="wrap">
+
+<section id="home">
+  <div class="hero"><div class="mm"></div><div><h1>مخبر العالم الصغير 🔬</h1><p class="sub">السنة الأولى متوسط – علوم الطبيعة والحياة</p></div></div>
+  <div id="reg"><p class="sub">سجّل بياناتك لتبدأ يا عالِم 👇</p><div class="promo">⚡ امتحان سريع من 20 سؤالًا <span class="plus1">+1 في التقويم</span></div><input id="fn" class="name" placeholder="الاسم" maxlength="20" autocomplete="off"><input id="ln" class="name" placeholder="اللقب" maxlength="20" autocomplete="off"><div class="secs" id="secs"><button data-s="1">القسم 1</button><button data-s="2">القسم 2</button><button data-s="3">القسم 3</button></div><div class="fb hid" id="rerr"></div><button class="btn" id="go1">ابدأ المغامرة 🚀</button></div>
+  <div id="menu" class="hid"><div class="who" id="who"></div>
+  <button class="big" style="background:#ff8a3d" id="bExam"><span class="ic">⚡</span><div><strong>امتحان سريع <span class="plus1">+1 في التقويم</span></strong><span>20 سؤال متنوّع</span></div></button>
+  <button class="big" style="background:#7a5cff" id="bFree"><span class="ic">🧪</span><div><strong>تجارب حرّة</strong><span>اختر أي غذاء وجرّب كل الكواشف كأنك في المخبر</span></div></button>
+  <button class="big" style="background:#ff5fa2" id="bChal"><span class="ic">🏆</span><div><strong>تحدّي العالم الصغير</strong><span>اكتشف مكوّنات 5 أغذية واجمع النجوم <b id="bestLab"></b></span></div></button>
+  <div class="sec">ألعاب إضافية 🎮</div>
+  <div id="levels"></div></div>
+  <div class="by">إعداد الأستاذ: <b>عبد العزيز اسماعيل</b><br>متوسطة القلم إمرو الخاصة – غرداية</div>
+</section>
+
+<section id="game" class="hid">
+  <div class="top"><button class="btn alt small" id="back">رجوع</button><span id="lvt"></span><span id="hearts"></span></div>
+  <div class="bar"><i id="prog"></i></div>
+  <div class="q"><div class="e" id="qe"></div><h2 id="qt"></h2><p id="qs"></p></div>
+  <div class="opts" id="opts"></div>
+  <div class="fb hid" id="fb"></div>
+  <button class="next hid" id="next">التالي</button>
+</section>
+
+<section id="lab" class="hid">
+  <div class="top"><button class="btn alt small" id="lback">رجوع</button><span id="lcount"></span><span id="lscore"></span></div>
+  <div class="mrow"><div class="mm"></div><div class="bub" id="say"></div></div>
+  <div class="bench" id="stage"></div>
+  <div class="foods" id="foods"></div>
+  <div class="shelf" id="shelf"></div>
+  <ul class="nb" id="nb"></ul>
+  <div class="chips" id="chips"></div>
+  <button class="btn hid" id="fin">انتهيت من التجارب – حدّد المكوّنات</button>
+  <div class="chk hid" id="chk"></div>
+  <button class="btn hid" id="ver">تحقّق ✔</button>
+  <div class="fb hid" id="lfb"></div>
+  <button class="next hid" id="lnext">التالي</button>
+</section>
+
+<section id="end" class="hid end">
+  <div class="stars" id="stars"></div><h2 id="etitle"></h2><div class="num" id="escore"></div><p id="emsg"></p>
+  <p id="sent" style="font-weight:900"></p><button class="btn alt" id="copy">📋 نسخ بطاقة النتيجة</button>
+  <button class="btn" id="again">العب من جديد</button>
+  <button class="btn alt" id="home2">القائمة الرئيسية</button>
+</section>
+
+<section id="exam" class="hid">
+  <div id="exq">
+    <div class="top"><button class="btn alt small" id="exback">رجوع</button><span>⚡ امتحان سريع</span><span id="excount"></span></div>
+    <div class="bar"><i id="exprog"></i></div>
+    <div class="q"><div class="e" id="exe"></div><h2 id="exqt"></h2></div>
+    <div class="opts" id="exopts"></div>
+    <div class="fb hid" id="exfb"></div>
+    <button class="next hid" id="exnext">التالي</button>
+  </div>
+  <div id="exr" class="end hid">
+    <div class="stars" id="exstars"></div><h2 id="exti"></h2><div class="num" id="exsc"></div><p id="exmsg"></p>
+    <p id="exsent" style="font-weight:900"></p>
+    <button class="btn alt hid" id="exresend">🔄 إعادة إرسال النتيجة</button>
+    <div class="rev" id="exrev"></div>
+    <button class="btn alt" id="exhome">القائمة الرئيسية</button>
+  </div>
+</section>
+</div>
+
+<script>
+/* ===== ضع هنا رابط تطبيق الويب (Apps Script) الذي ينتهي بـ /exec ===== */
+const SHEET_URL="https://script.google.com/macros/s/AKfycbxPHuUIhCPLbfT3HnpxzxVyzu9fGLYlbiYPJpbkxrbwihKwwjzV3BErtCF48ZCuC8ZS/exec";
+/* ================================================================== */
+const $=id=>document.getElementById(id);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const go=s=>{["home","game","lab","end","exam"].forEach(x=>$(x).classList.toggle("hid",x!==s));scrollTo(0,0);try{S.whoosh()}catch(e){}};
+const LIVES=5;
+/* ---------- المؤثرات الصوتية (صدى + ضاغط + أجراس) ---------- */
+let AC=null,MASTER=null,REV=null,muted=false,unlocked=false;
+try{muted=localStorage.getItem("mute")==="1"}catch(e){}
+$("mute").textContent=muted?"🔇":"🔊";
+addEventListener("pointerdown",()=>{unlocked=true;ac()},{capture:true,once:true});
+function ac(){
+ if(muted||!unlocked)return null;
+ try{
+  if(!AC){AC=new(window.AudioContext||window.webkitAudioContext)();
+   const comp=AC.createDynamicsCompressor();comp.threshold.value=-18;comp.ratio.value=4;comp.attack.value=.005;comp.release.value=.2;
+   MASTER=AC.createGain();MASTER.gain.value=.9;MASTER.connect(comp);comp.connect(AC.destination);
+   const len=Math.floor(AC.sampleRate*1.6),ir=AC.createBuffer(2,len,AC.sampleRate);
+   for(let c=0;c<2;c++){const d=ir.getChannelData(c);for(let i=0;i<len;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3)}
+   const cv=AC.createConvolver();cv.buffer=ir;const wet=AC.createGain();wet.gain.value=.22;cv.connect(wet);wet.connect(MASTER);REV=cv}
+  if(AC.state==="suspended")AC.resume();return AC}catch(e){return null}}
+function out(n,send){n.connect(MASTER);if(send){const g=AC.createGain();g.gain.value=send;n.connect(g);g.connect(REV)}}
+function osc(f,d,o={}){const x=ac();if(!x)return;const {type="sine",v=.2,at=0,f2=null,a=.005,send=.25}=o,t=x.currentTime+at,os=x.createOscillator(),g=x.createGain();
+ os.type=type;os.frequency.setValueAtTime(f,t);if(f2)os.frequency.exponentialRampToValueAtTime(f2,t+d);
+ g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+ os.connect(g);out(g,send);os.start(t);os.stop(t+d+.05)}
+function nz(d,o={}){const x=ac();if(!x)return;const {fr=1000,q=1,type="bandpass",v=.1,at=0,f2=null,a=.01,send=.1}=o,n=Math.floor(x.sampleRate*d),b=x.createBuffer(1,n,x.sampleRate),c=b.getChannelData(0);
+ for(let i=0;i<n;i++)c[i]=Math.random()*2-1;const s=x.createBufferSource();s.buffer=b;const fl=x.createBiquadFilter();fl.type=type;fl.Q.value=q;const t=x.currentTime+at;
+ fl.frequency.setValueAtTime(fr,t);if(f2)fl.frequency.exponentialRampToValueAtTime(f2,t+d);
+ const g=x.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+ s.connect(fl);fl.connect(g);out(g,send);s.start(t)}
+const bell=(f,at=0,v=.16)=>{osc(f,1.1,{v,at,send:.45});osc(f*2.76,.6,{v:v*.35,at,send:.4});osc(f*5.4,.3,{v:v*.15,at,send:.3})};
+const S={
+ tap:()=>{osc(1200,.05,{type:"triangle",v:.09,send:.1});osc(700,.06,{v:.06,send:.1})},
+ whoosh:()=>nz(.35,{fr:400,f2:3000,q:.8,v:.05,a:.1,send:.2}),
+ pop:()=>{osc(380,.12,{v:.2,f2:900,send:.2});nz(.04,{fr:2500,v:.05})},
+ pour:()=>{nz(1,{fr:600,f2:2200,q:2,v:.07,a:.2,send:.2});for(let i=0;i<6;i++)osc(300+Math.random()*200,.09,{v:.08,at:.15+i*.1,f2:600,send:.2});[.7,.95,1.2].forEach(t=>osc(1400,.25,{v:.07,at:t,f2:700,send:.5}))},
+ heat:()=>{nz(1.9,{type:"lowpass",fr:500,f2:260,q:.5,v:.18,a:.3,send:.05});nz(1.9,{fr:120,q:.6,v:.12,a:.3});for(let i=0;i<22;i++)nz(.03+Math.random()*.03,{type:"highpass",fr:3000+Math.random()*3000,v:.08+Math.random()*.08,at:.2+i*.075+Math.random()*.05,send:.05})},
+ rub:()=>[0,.5,1].forEach(t=>nz(.42,{fr:1500,f2:700,q:1.2,v:.09,a:.08,at:t,send:.1})),
+ found:()=>{[523.25,659.25,783.99,1046.5].forEach((f,i)=>bell(f,i*.09,.12));nz(.6,{type:"highpass",fr:6000,v:.05,at:.3,a:.15,send:.4})},
+ nope:()=>{osc(330,.28,{type:"triangle",v:.16,f2:220,send:.25});osc(247,.3,{v:.1,at:.12,f2:165})},
+ ding:()=>{bell(880,0,.16);bell(1320,.1,.12)},
+ buzz:()=>{osc(180,.32,{type:"sawtooth",v:.1,f2:110,send:.1});osc(185,.32,{type:"square",v:.05,f2:112,send:.1})},
+ win:()=>{[523.25,659.25,783.99,1046.5,1318.5].forEach((f,i)=>{bell(f,i*.11,.14);osc(f/2,.5,{type:"triangle",v:.06,at:i*.11,send:.3})});nz(1,{type:"highpass",fr:5000,v:.06,at:.5,a:.3,send:.5})},
+ lose:()=>[392,330,262].forEach((f,i)=>osc(f,.45,{type:"triangle",v:.14,at:i*.22,f2:f*.97}))
+};
+$("mute").onclick=()=>{muted=!muted;$("mute").textContent=muted?"🔇":"🔊";try{localStorage.setItem("mute",muted?"1":"0")}catch(e){}if(!muted){unlocked=true;S.pop()}};
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(b&&b.id!=="mute"&&!/\b(rg|fc|opt)\b/.test(b.className))S.tap()});
+const MAS=`<svg class="mas" viewBox="0 0 80 92"><path d="M18 18Q40-6 62 18Z" fill="#5b3a29"/><circle cx="40" cy="32" r="22" fill="#ffd9b0"/><path d="M16 22h48" stroke="#7a5cff" stroke-width="8" stroke-linecap="round"/><circle cx="30" cy="25" r="9" fill="#fff" stroke="#7a5cff" stroke-width="3"/><circle cx="50" cy="25" r="9" fill="#fff" stroke="#7a5cff" stroke-width="3"/><circle cx="31" cy="26" r="3.5" fill="#222"/><circle cx="51" cy="26" r="3.5" fill="#222"/><path d="M30 42q10 9 20 0" stroke="#d63a3a" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M14 57h52l7 35H7z" fill="#fff" stroke="#9fb4ff" stroke-width="2"/><path d="M40 57v35" stroke="#9fb4ff" stroke-width="2"/></svg>`;
+document.querySelectorAll(".mm").forEach(e=>e.innerHTML=MAS);
+$("fl").innerHTML=["🍎","🥕","🧪","🥛","🍞","🔬","🧀","🍊","🥚","🐟"].map((e,k)=>`<span style="left:${k*10+2}%;animation-delay:-${k*1.7}s;animation-duration:${10+k%4*3}s">${e}</span>`).join("");
+
+/* ---------- المخبر ---------- */
+const T=[
+{k:"h",n:"التسخين",ic:"🔥",bc:"#ff7a2f"},
+{k:"st",n:"ماء اليود",ic:"🧪",bc:"#d9822b",c0:"#d9822b",c1:"#3a1f7a",p:"ظهر لون أزرق بنفسجي",g:"بقي اللون برتقاليا",d:"النشاء"},
+{k:"su",n:"محلول فهلينغ + تسخين",ic:"🧪",bc:"#3b7ddd",c0:"#3b7ddd",c1:"#3b7ddd",pp:"#b23a1a",p:"تشكّل راسب أحمر آجري",g:"بقي المحلول أزرق",d:"السكر"},
+{k:"pr",n:"حمض الآزوت",ic:"🧪",bc:"#c9a400",c0:"#cfe6ee",c1:"#f4d21f",p:"ظهر اللون الأصفر",g:"لم يتغيّر اللون",d:"البروتين"},
+{k:"fa",n:"ورقة بيضاء (حك)",ic:"📄",bc:"#8d7cc9",p:"تشكّلت بقعة شفافة لا تزول بالتسخين",g:"لم تظهر بقعة شفافة",d:"الدسم"},
+{k:"cl",n:"نترات الفضة",ic:"🧪",bc:"#6b7f9e",c0:"#d6e6ee",c1:"#d6e6ee",pp:"#fff",p:"تشكّل راسب أبيض يسودّ عند تعريضه للضوء",g:"لم يتشكّل راسب",d:"ملح الكلورور"},
+{k:"ca",n:"أكسالات الأمونيوم",ic:"🧪",bc:"#c0569b",c0:"#d6e6ee",c1:"#d6e6ee",pp:"#fff",p:"تشكّل راسب أبيض",g:"لم يتشكّل راسب",d:"ملح الكالسيوم"}];
+const LB={o:"أصل عضوي (يحترق)",m:"أصل معدني (لا يحترق)",st:"النشاء",su:"السكر",pr:"البروتين",fa:"الدسم",wa:"الماء",cl:"ملح الكلورور",ca:"ملح الكالسيوم"};
+const F=[["🍞","الخبز","o,st"],["🥔","البطاطا","o,st"],["🍚","الأرز","o,st"],["🍝","المعكرونة","o,st"],["🌽","الذرة","o,st,pr,fa"],
+["🫘","الفاصولياء","o,pr"],["🥚","بياض البيض","o,pr"],["🥩","اللحم","o,pr,fa"],["🐟","السردين","o,pr,fa"],["🧀","الجبن","o,pr,fa,ca"],
+["🥛","الحليب","o,su,pr,fa,wa,cl,ca"],["🧈","الزبدة","o,fa"],["🫒","زيت الزيتون","o,fa"],["🥜","الجوز","o,fa"],
+["🍬","السكر","o,su"],["🍯","العسل","o,su"],["🍊","عصير البرتقال","o,su,wa"],["🍎","عصير التفاح","o,su,wa"],["🍅","الطماطم","o,su,wa"],["🥕","الجزر","o,su,wa"],
+["🧂","الملح","m,cl"],["💧","الماء","m,wa"]];
+const heatTxt=f=>{const s=f[2].split(",");return s.includes("o")?(s.includes("wa")?"تصاعد بخار الماء ثم تفحّمت المادة العضوية":"احترق وتفحّم"):(s.includes("wa")?"تبخّر الماء ولم يتفحّم":"تطاير الملح ولم يتفحّم")};
+let mode="f",cf=-1,busy=false,RS={},done=new Set(),lf=[],lk=0;
+const say=t=>$("say").textContent=t;
+$("shelf").innerHTML=T.map((t,k)=>`<button class="rg" style="--bc:${t.bc}" data-k="${k}">${t.ic} ${t.n}</button>`).join("");
+document.querySelectorAll(".rg").forEach(b=>b.onclick=()=>run(T[+b.dataset.k]));
+$("foods").innerHTML=F.map((f,k)=>`<button class="fc" data-k="${k}"><b>${f[0]}</b>${f[1]}</button>`).join("");
+document.querySelectorAll(".fc").forEach(b=>b.onclick=()=>pickFood(+b.dataset.k));
+const tubeHTML=(f,c="#cfe9f5",h=30,extra="")=>`<div class="tube"><div class="liq" id="lq" style="background:${c};height:${h}%"></div><div class="ppt" id="pp"></div><div class="fd">${f[0]}</div></div>${extra}`;
+function pickFood(k){if(busy)return;S.pop();cf=k;const f=F[k];RS[f[1]]=RS[f[1]]||{};
+ document.querySelectorAll(".fc").forEach((b,i)=>b.classList.toggle("on",i===k));
+ $("stage").innerHTML=`<div class="rig">${tubeHTML(f)}</div>`;
+ say(mode==="f"?`وضعنا «${f[1]}» في الأنبوب. اختر كاشفا من الرف!`:`جرّب الكواشف على «${f[1]}» ثم حدّد مكوّناته.`);
+ note();$("shelf").querySelectorAll("button").forEach(b=>b.disabled=false)}
+function note(){const r=RS[F[cf][1]]||{};$("nb").innerHTML=Object.values(r).map(x=>`<li>${x.t}</li>`).join("");
+ if(mode!=="f"){$("chips").innerHTML="";return}
+ const s=new Set(),fl=F[cf][2].split(",");Object.entries(r).forEach(([k,x])=>{if(k==="h"){s.add(x.pos?"o":"m");if(fl.includes("wa"))s.add("wa")}else if(x.pos)s.add(k)});
+ $("chips").innerHTML=[...s].map(k=>`<span>✅ ${LB[k]}</span>`).join("");
+ $("lscore").textContent="⭐ "+done.size}
+function boom(){const r=$("stage").getBoundingClientRect();for(let i=0;i<14;i++){const s=document.createElement("span");s.className="pop";s.textContent=["🎉","⭐","✨","🌟"][i%4];
+ s.style.left=(r.left+r.width/2)+"px";s.style.top=(r.top+r.height/2)+"px";s.style.setProperty("--x",(Math.random()*240-120)+"px");s.style.setProperty("--y",(Math.random()*-200-20)+"px");document.body.appendChild(s);setTimeout(()=>s.remove(),1200)}}
+function run(t){
+ if(busy||cf<0){if(cf<0)say("اختر غذاءً أولا من الأسفل 👇");return}
+ busy=true;S[t.k==="h"?"heat":t.k==="fa"?"rub":"pour"]();const f=F[cf],fl=f[2].split(","),pos=t.k==="h"?fl.includes("o"):fl.includes(t.k);let h;
+ if(t.k==="h")h=`<div class="rig">${tubeHTML(f,"#cfe9f5",25)}<div class="flame">🔥</div><div class="steam"><i>💨</i><i>💨</i><i>💨</i></div></div>`;
+ else if(t.k==="fa")h=`<div class="sheet"><i class="spot" id="sp"></i><span class="rub">${f[0]}</span></div>`;
+ else h=`<div class="rig" style="--dc:${t.c0}"><div class="pour">🧪</div><div class="drops"><i></i><i></i><i></i></div>${tubeHTML(f,t.c0,30)}</div>`;
+ $("stage").innerHTML=h;say("جارٍ التجربة… "+t.n+" ⏳");
+ setTimeout(()=>{let m,mean;
+  if(t.k==="h"){$("lq").style.background=pos?"#151515":"#f4f4f4";m=heatTxt(f);mean=pos?"غذاء عضوي":"غذاء معدني"}
+  else if(t.k==="fa"){if(pos)$("sp").style.opacity=1;m=pos?t.p:t.g;mean="الدسم"}
+  else{$("lq").style.height="45%";if(pos){$("lq").style.background=t.c1;if(t.pp){$("pp").style.background=t.pp;$("pp").style.height="30%"}}m=pos?t.p:t.g;mean=t.d}
+  const free=mode==="f";
+  say((pos?"رائع! ":"لاحظ: ")+m+(free?(t.k==="h"||pos?" ⇒ "+(t.k==="h"?mean:"يوجد "+mean):" ⇒ لا يوجد "+mean):""));
+  RS[f[1]][t.k]={pos,t:t.ic+" "+t.n+": "+m};note();if(pos){boom();S.found()}else S.nope();
+  if(free&&Object.keys(RS[f[1]]).length===T.length&&!done.has(f[1])){done.add(f[1]);S.win();report()}$("lscore").textContent=free?"⭐ "+done.size:"⭐ "+score;
+  busy=false},1900)}
+function startLab(m){mode=m;cf=-1;busy=false;RS={};go("lab");$("stage").innerHTML=`<p style="font-weight:900">🔬 مرحبا في المخبر!</p>`;
+ $("chips").innerHTML="";$("nb").innerHTML="";["chk","ver","lfb","lnext"].forEach(x=>$(x).classList.add("hid"));
+ document.querySelectorAll(".fc").forEach(b=>b.classList.remove("on"));
+ if(m==="f"){curId="free";$("foods").classList.remove("hid");$("shelf").classList.remove("hid");$("nb").classList.remove("hid");$("fin").classList.add("hid");$("lcount").textContent="تجارب حرّة";$("lscore").textContent="⭐ "+done.size;say("أنا العالم الصغير! اختر غذاءً من الشريط ثم جرّب الكواشف. أكمل الكواشف السبعة على غذاء لتربح نجمة ⭐")}
+ else{curId="lab";redo=()=>startLab("c");lf=shuffle(F).slice(0,5);qs=lf;i=0;score=0;lives=LIVES;lk=0;labShow()}}
+function labShow(){RS={};cf=F.indexOf(lf[lk]);$("foods").classList.add("hid");["shelf","nb"].forEach(x=>$(x).classList.remove("hid"));$("fin").classList.remove("hid");["chk","ver","lfb","lnext"].forEach(x=>$(x).classList.add("hid"));
+ $("lcount").textContent=`التحدي ${lk+1}/5`;$("lscore").textContent="⭐ "+score;pickFood(cf);say(`تحدّي ${lk+1}: اكتشف مكوّنات «${F[cf][1]}»! جرّب الكواشف ثم اضغط «انتهيت».`)}
+$("fin").onclick=()=>{["shelf","nb","fin"].forEach(x=>$(x).classList.add("hid"));say("حسب نتائجك، ماذا يحتوي «"+F[cf][1]+"»؟ اختر كل ما ينطبق ✔");
+ $("chk").innerHTML=Object.keys(LB).map(k=>`<label><input type="checkbox" value="${k}"> ${LB[k]}</label>`).join("");$("chk").classList.remove("hid");$("ver").classList.remove("hid")};
+$("ver").onclick=()=>{const f=F[cf],ok=f[2].split(","),got=[...document.querySelectorAll("#chk input:checked")].map(x=>x.value);
+ const err=ok.filter(k=>!got.includes(k)).length+got.filter(k=>!ok.includes(k)).length,pts=Math.max(0,10-3*err);score+=pts;
+ $("lfb").textContent=(err?"❌ بعض الإجابات غير صحيحة. ":"✅ ممتاز يا عالِم! ")+"«"+f[1]+"» يحتوي على: "+ok.map(k=>LB[k]).join("، ")+". (+"+pts+")";
+ if(!err){boom();S.win()}else S.nope();$("lscore").textContent="⭐ "+score;["chk","ver"].forEach(x=>$(x).classList.add("hid"));$("lfb").classList.remove("hid");
+ $("lnext").textContent=lk===4?"عرض النتيجة":"التجربة التالية";$("lnext").classList.remove("hid")};
+$("lnext").onclick=()=>{if(lk===4)finish();else{lk++;labShow()}};
+$("lback").onclick=()=>home();
+
+/* ---------- ألعاب الأسئلة ---------- */
+const L=[
+{id:"origin",t:"الأصل والمصدر",d:"عضوي أم معدني؟ نباتي أم حيواني؟",ic:"🌱",c:"#2fd27a",
+ build(){const A=[["🫘","الفول",0,0],["🍯","العسل",0,1],["🧀","الجبن",0,1],["🐟","السردين",0,1],["💧","ماء سعيدة",1],["🍅","الطماطم",0,0],["🧈","الزبدة",0,1],["🧂","الملح",1],["🥩","اللحم",0,1],["🌶️","الفلفل",0,0],["🍞","الخبز",0,0],["🍬","السكر",0,0]];
+  const out=[];shuffle(A).slice(0,6).forEach(([e,n,o,s])=>{
+   out.push({e,s:n,q:"ما أصل هذا الغذاء؟",o:["عضوي (قابل للاحتراق)","معدني (غير قابل للاحتراق)"],a:o,x:n+(o?": غذاء معدني، لا يحترق ولا يتفحّم عند التسخين.":": غذاء عضوي، يحترق ويتفحّم عند التسخين.")});
+   if(!o)out.push({e,s:n,q:"هو غذاء عضوي، فما مصدره؟",o:["نباتي 🌿","حيواني 🐄"],a:s,x:n+(s?": من مصدر حيواني.":": من مصدر نباتي.")})});return out}},
+{id:"comp",t:"تصنيف الأغذية حسب التركيب",d:"بسيط، مركب، كامل، والعنصر السائد",ic:"🧪",c:"#ffc93c",
+ build(){const D=[["🥚","بياض البيض",10.3,0,0],["🥔","البطاطا",2,15.2,.22],["🧈","الزبدة",.7,1,82],["🌽","الذرة",2.5,15.8,4],["🥛","الحليب",15,10,11,1],["🍬","السكر الأبيض",0,99.8,0],["🍯","عسل النحل",1,76,.06],["🐐","حليب الماعز",3.22,4.01,3.2,1],["🫒","زيت الصوجا",0,0,99.9]];
+  const dom=["بروتيني","سكري (غلوسيدي)","دسمي"],out=[];
+  shuffle(D).slice(0,5).forEach(([e,n,p,g,f,c])=>{const v=[p,g,f],nz=v.filter(x=>x>0).length,ty=c?2:nz===1?0:1;
+   out.push({e,s:n,q:`بروتين ${p} غ · غلوسيدات ${g} غ · دسم ${f} غ`,o:["غذاء بسيط","غذاء مركب","غذاء مركب كامل"],a:ty,x:["بسيط: عنصر غذائي واحد فقط.","مركب: عنصران غذائيان أو أكثر.","مركب كامل: كل العناصر البسيطة بكميات متقاربة كالحليب."][ty]});
+   if(!c)out.push({e,s:n,q:"ما العنصر الغذائي السائد فيه؟",o:dom,a:v.indexOf(Math.max(...v)),x:n+": غذاء "+dom[v.indexOf(Math.max(...v))]+" لأن هذا العنصر بكمية أكبر."})});return out}},
+{id:"role",t:"دور الأغذية في الجسم",d:"أغذية طاقة أم أغذية نمو (بناء)؟",ic:"💪",c:"#ff5fa2",
+ build(){const o=["أغذية الطاقة ⚡","أغذية النمو (البناء) 🧱"],x=["الطاقة: الغلوسيدات (السكريات) والدسم.","النمو والبناء: البروتينات، الماء، الأملاح المعدنية والفيتامينات."];
+  return shuffle([["🍞","الخبز",0],["🍬","السكر",0],["🫒","الزيت",0],["🧈","الزبدة",0],["🥔","البطاطا",0],["🏃","رياضي قبل سباق",0],["🥩","اللحم (بروتينات)",1],["🥚","بياض البيض",1],["🐟","السمك",1],["🍊","الفيتامينات",1],["🧂","الأملاح المعدنية",1],["💧","الماء",1],["🏥","مريض بعد عملية جراحية",1]]).slice(0,8)
+  .map(([e,s,a])=>({e,s,q:"ما نوع الأغذية المناسب أو دورها؟",o,a,x:x[a]}))}},
+{id:"health",t:"الراتب والتوازن الغذائي",d:"الرواتب الغذائية وأمراض سوء التغذية",ic:"⚖️",c:"#7a5cff",
+ build(){const R=["راتب النمو","راتب الصيانة","راتب الإنتاج","راتب العمل"];
+  return shuffle([["🧒","تلميذ في السنة الأولى متوسط",R,0,"راتب النمو: لطفل في مرحلة النمو."],["🤰","امرأة حامل",R,2,"راتب الإنتاج: للحامل أو المرضعة."],["👷","عامل بناء",R,3,"راتب العمل: لنشاط مكثف."],["👴","شيخ متقاعد",R,1,"راتب الصيانة: لبالغ في حالة راحة."],
+  ["🐟","نقص اليود يسبّب:",["السلعة الدرقية","الأسقربوط","الكساح","السمنة"],0,"السلعة الدرقية؛ نتناول السمك والملح المعالج باليود."],["🍋","نقص الفيتامين C يسبّب:",["الكساح","الكواشيوركور","الأسقربوط","السمنة"],2,"الأسقربوط؛ نتناول الحمضيات."],["☀️","نقص الفيتامين D يسبّب:",["الأسقربوط","الكساح","السلعة الدرقية","الهزال"],1,"الكساح؛ نتناول الشوفان ونتعرّض للشمس."],["🍚","نقص البروتين الحيواني يسبّب:",["الكساح","السمنة","الأسقربوط","الكواشيوركور"],3,"الكواشيوركور؛ نتناول اللحم والحليب."],["🍔","الإفراط في الأكل مع قلة النشاط يسبّب:",["السمنة","الكساح","السلعة الدرقية","الأسقربوط"],0,"السمنة؛ نتجنّب الإكثار من الدسم والسكريات ونمارس الرياضة."]]).slice(0,7)
+  .map(([e,s,o,a,x])=>({e,s,q:o===R?"ما الراتب الغذائي المناسب؟":"اختر الإجابة الصحيحة",o,a,x}))}}
+];
+const best={};
+let curId="",redo=()=>{},qs=[],i=0,score=0,lives=LIVES,streak=0,locked=false;
+function home(){go("home");showReg();$("bestLab").textContent=best.lab?"(⭐ "+best.lab+")":"";
+ $("levels").innerHTML=L.map((l,k)=>`<button class="lv" style="--c:${l.c}" data-k="${k}"><span class="ic">${l.ic}</span><div><strong>${l.t}</strong><span>${l.d}</span></div><span class="best">${best[l.id]?"⭐ "+best[l.id]:""}</span></button>`).join("");
+ document.querySelectorAll(".lv").forEach(b=>b.onclick=()=>start(+b.dataset.k))}
+$("bFree").onclick=()=>startLab("f");$("bChal").onclick=()=>startLab("c");
+/* ---------- تسجيل التلميذ ومتابعة الأستاذ ---------- */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const hash=s=>{let h=5381;for(const c of s)h=(h*33^c.codePointAt(0))>>>0;return h.toString(36)};
+const GN={origin:"الأصل والمصدر",comp:"تصنيف التركيب",role:"دور الأغذية",health:"التوازن الغذائي",lab:"تحدّي المخبر",free:"التجارب الحرّة (نجوم)"};
+let ME=null,DB=null,SEC=0,FS=0;
+try{const m=JSON.parse(localStorage.getItem("me")||"null");if(m&&m.first&&m.last&&m.sec)ME=m}catch(e){}
+function showReg(){$("reg").classList.toggle("hid",!!ME);$("menu").classList.toggle("hid",!ME);
+ if(ME){$("who").innerHTML=`👋 أهلا ${esc(ME.first)} ${esc(ME.last)} – القسم ${ME.sec} <button class="chg" id="chg">تغيير</button>`;$("chg").onclick=()=>{ME=null;showReg()}}}
+document.querySelectorAll("#secs button").forEach(b=>b.onclick=()=>{SEC=+b.dataset.s;document.querySelectorAll("#secs button").forEach(x=>x.classList.toggle("on",x===b))});
+$("go1").onclick=()=>{const first=$("fn").value.trim(),last=$("ln").value.trim(),e=$("rerr");
+ if(!first||!last||!SEC){e.textContent="اكتب الاسم واللقب واختر القسم (1 أو 2 أو 3).";e.classList.remove("hid");return}
+ e.classList.add("hid");ME={first,last,sec:SEC,id:"s"+SEC+"_"+hash((first+"|"+last).toLowerCase())};
+ try{localStorage.setItem("me",JSON.stringify(ME))}catch(x){}newSess();sync();showReg()};
+/* ---------- إرسال الاسم واللقب والقسم والمدة إلى Google Sheet ---------- */
+let secs=0,lastSent=0,T0=Date.now();
+const newId=()=>Math.random().toString(36).slice(2,8)+Date.now().toString(36);
+let SID=newId();const live=SHEET_URL.startsWith("https://");
+function sync(beacon){
+ if(!live||!ME)return;
+ const body=JSON.stringify({sid:SID,t:T0,first:ME.first,last:ME.last,sec:ME.sec,secs});
+ try{if(beacon&&navigator.sendBeacon)navigator.sendBeacon(SHEET_URL,body);else fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body,keepalive:true})}catch(e){}}
+function newSess(){secs=0;lastSent=0;SID=newId();T0=Date.now()}
+setInterval(()=>{if(ME&&document.visibilityState==="visible"){secs++;if(secs-lastSent>=20){lastSent=secs;sync()}}},1000);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"&&ME){lastSent=secs;sync(true)}});
+addEventListener("pagehide",()=>{if(ME)sync(true)});
+async function report(){sync();return live}
+$("copy").onclick=async()=>{const t=`${ME.first} ${ME.last} – القسم ${ME.sec} – ${GN[curId]}: ${$("escore").textContent}`;try{await navigator.clipboard.writeText(t);$("copy").textContent="تم النسخ ✅"}catch(e){$("sent").textContent=t}};
+function start(k){curId=L[k].id;redo=()=>start(k);score=0;lives=LIVES;streak=0;i=0;qs=L[k].build();go("game");$("lvt").textContent=L[k].t;show()}
+function hearts(){$("hearts").textContent="❤️".repeat(lives)+"🤍".repeat(LIVES-lives)}
+function show(){const q=qs[i];locked=false;hearts();$("prog").style.width=(i/qs.length*100)+"%";
+ $("qe").textContent=q.e;$("qt").textContent=q.s;$("qs").textContent=q.q;
+ $("opts").innerHTML=q.o.map((t,k)=>`<button class="opt" data-k="${k}">${t}</button>`).join("");
+ document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>pick(+b.dataset.k,b));$("fb").classList.add("hid");$("next").classList.add("hid")}
+function pick(k,b){if(locked)return;locked=true;const q=qs[i],bs=document.querySelectorAll(".opt");let m;
+ if(k===q.a){S.ding();b.classList.add("ok");streak++;score+=10+(streak>2?5:0);m="✅ أحسنت! "+q.x+(streak>2?" 🔥 سلسلة "+streak+" (+5)":"")}
+ else{S.buzz();b.classList.add("no");bs[q.a].classList.add("ok");streak=0;lives--;m="❌ ليست الإجابة الصحيحة. "+q.x}
+ hearts();$("fb").textContent=m;$("fb").classList.remove("hid");
+ $("next").textContent=(i===qs.length-1||lives===0)?"عرض النتيجة":"التالي";$("next").classList.remove("hid")}
+$("next").onclick=()=>{if(lives===0||i===qs.length-1)finish();else{i++;show()}};
+function finish(){go("end");setTimeout(()=>lives===0?S.lose():S.win(),250);const max=qs.length*10,r=score/max,st=lives===0?0:r>=.85?3:r>=.6?2:1,n=ME?ME.first:"";
+ if(score>(best[curId]||0))best[curId]=score;
+ $("copy").textContent="📋 نسخ بطاقة النتيجة";$("sent").textContent="";report(curId,score).then(ok=>$("sent").textContent=ok?"✅ تم إرسال نتيجتك إلى الأستاذ":"📋 انسخ بطاقة النتيجة وأرسلها لأستاذك");
+ $("stars").textContent="⭐".repeat(st)+"☆".repeat(3-st);
+ $("etitle").textContent=lives===0?"انتهت القلوب!":(n?"برافو يا "+n+"!":"برافو يا عالِم!");$("escore").textContent=score+" نقطة";
+ $("emsg").textContent=lives===0?"لا بأس، راجع الدرس وأعد المحاولة، ستنجح!":st===3?"ممتاز! أنت عالِم حقيقي 🎉":st===2?"جيد جدا! حاول مرة أخرى للوصول إلى 3 نجوم.":"بداية جيدة، أعد المحاولة لتحسّن نتيجتك."}
+$("again").onclick=()=>redo();$("home2").onclick=home;$("back").onclick=home;
+
+/* ---------- الامتحان السريع: 30 سؤالًا في البنك، 20 عشوائيًا لكل تلميذ ---------- */
+/* صيغة السؤال: [رمز، النص، الإجابة الصحيحة، [الخيارات الخاطئة]، التفسير]  — أو [رمز، النص، true/false، التفسير] */
+const EX=[
+["🧪","أي كاشف نستعمله للكشف عن النشاء؟","ماء اليود",["محلول فهلينغ","حمض الآزوت","نترات الفضة"],"ماء اليود يعطي لونًا أزرق بنفسجيًا مع النشاء."],
+["🔥","نسخّن محلول فهلينغ مع غذاء، فتشكّل راسب أحمر آجري. ماذا يحتوي الغذاء؟","السكر",["النشاء","البروتين","الدسم"],"محلول فهلينغ مع التسخين يكشف عن السكر."],
+["🟡","حمض الآزوت يعطي لونًا أصفر مع:","البروتين",["السكر","الدسم","ملح الكلورور"],"اللون الأصفر مع حمض الآزوت يدل على وجود البروتين."],
+["📄","بقعة شفافة على ورقة بيضاء لا تزول بالتسخين تدل على وجود:","الدسم",["الماء","النشاء","ملح الكالسيوم"],"البقعة الشفافة الدائمة هي كاشف الدسم."],
+["⚪","راسب أبيض يسودّ عند تعريضه للضوء مع نترات الفضة يدل على:","ملح الكلورور",["ملح الكالسيوم","البروتين","السكر"],"نترات الفضة تكشف عن ملح الكلورور."],
+["🥛","نستعمل أكسالات الأمونيوم للكشف عن:","ملح الكالسيوم",["ملح الكلورور","النشاء","الدسم"],"يتشكّل راسب أبيض عند وجود ملح الكالسيوم."],
+["🔥","عند تسخين غذاء عضوي في أنبوب اختبار:","يحترق ويتفحّم",["يبقى دون تغيّر","يتحوّل إلى ملح","يتحوّل إلى ماء فقط"],"الغذاء العضوي يحترق ويتفحّم (لون أسود)."],
+["🧂","الملح غذاء معدني لا يحترق عند التسخين.",true,"صحيح: الملح من أصل معدني لذلك لا يتفحّم."],
+["🍬","السكر غذاء من أصل معدني.",false,"خطأ: السكر غذاء عضوي من أصل نباتي (يحترق ويتفحّم)."],
+["🧀","مصدر الجبن:","حيواني",["نباتي","معدني","اصطناعي معدني"],"الجبن يُصنع من الحليب، فمصدره حيواني."],
+["🍬","أي هذه الأغذية يُعدّ غذاءً بسيطًا؟","السكر الأبيض",["الحليب","الخبز","البطاطا"],"السكر الأبيض يحتوي عنصرًا غذائيًا واحدًا تقريبًا (الغلوسيدات)."],
+["🥛","أي هذه الأغذية غذاء مركّب كامل؟","الحليب",["السكر الأبيض","زيت الصوجا","الملح"],"الحليب يحتوي كل العناصر الغذائية البسيطة بكميات متقاربة."],
+["⚡","العناصر الغذائية التي تمدّ الجسم بالطاقة هي:","الغلوسيدات والدسم",["البروتينات والماء","الفيتامينات والأملاح","الماء والأملاح"],"أغذية الطاقة: الغلوسيدات (السكريات) والدسم."],
+["🥩","أي هذه الأغذية من أغذية النمو (البناء)؟","اللحم",["السكر","الزيت","الزبدة"],"اللحم غني بالبروتينات وهي أغذية النمو والبناء."],
+["💧","الماء من أغذية النمو (البناء).",true,"صحيح: الماء والبروتينات والأملاح والفيتامينات أغذية نمو."],
+["🧒","الراتب الغذائي المناسب لتلميذ في مرحلة النمو:","راتب النمو",["راتب الصيانة","راتب الإنتاج","راتب العمل"],"الطفل والمراهق في مرحلة النمو يحتاجان إلى راتب النمو."],
+["🤰","الراتب الغذائي المناسب للمرأة الحامل أو المرضع:","راتب الإنتاج",["راتب الصيانة","راتب النمو","راتب العمل"],"الحامل والمرضع تحتاجان إلى راتب الإنتاج."],
+["👷","الراتب الغذائي المناسب لعامل بناء ذي نشاط مكثّف:","راتب العمل",["راتب الصيانة","راتب النمو","راتب الإنتاج"],"النشاط المكثّف يتطلّب راتب العمل."],
+["👴","الراتب الغذائي المناسب لشيخ متقاعد في حالة راحة:","راتب الصيانة",["راتب العمل","راتب النمو","راتب الإنتاج"],"البالغ في حالة راحة يحتاج إلى راتب الصيانة."],
+["🐟","نقص اليود في الغذاء يسبّب:","السلعة الدرقية",["الأسقربوط","الكساح","السمنة"],"السلعة الدرقية؛ نتناول السمك والملح المعالج باليود."],
+["🍋","نقص الفيتامين C يسبّب:","الأسقربوط",["الكساح","الكواشيوركور","السلعة الدرقية"],"الأسقربوط؛ نتناول الحمضيات."],
+["☀️","نقص الفيتامين D يسبّب:","الكساح",["الأسقربوط","السلعة الدرقية","السمنة"],"الكساح؛ نتناول الشوفان ونتعرّض للشمس."],
+["🍚","نقص البروتين الحيواني عند الطفل يسبّب:","الكواشيوركور",["الكساح","السمنة","الأسقربوط"],"الكواشيوركور؛ نتناول اللحم والحليب."],
+["🍔","الإفراط في الأكل مع قلة النشاط البدني يسبّب:","السمنة",["الكساح","السلعة الدرقية","الأسقربوط"],"السمنة؛ نتجنّب الإكثار من الدسم والسكريات ونمارس الرياضة."],
+["🥛","الحليب يحتوي على الماء والبروتين والسكر والدسم والأملاح المعدنية.",true,"صحيح: لذلك هو غذاء مركّب كامل."],
+["🥚","بياض البيض غذاء غني بالدسم.",false,"خطأ: بياض البيض غذاء بروتيني."],
+["🥔","أي هذه الأغذية يحتوي على النشاء؟","البطاطا",["زيت الزيتون","الملح","عسل النحل"],"البطاطا غنية بالنشاء (يكشفه ماء اليود)."],
+["🫒","العنصر الغذائي السائد في زيت الزيتون:","الدسم",["البروتين","النشاء","الماء"],"زيت الزيتون غذاء دسمي."],
+["🔥","عند تسخين الحليب يتصاعد بخار الماء ثم يتفحّم.",true,"صحيح: الحليب يحتوي الماء، وهو غذاء عضوي يتفحّم."],
+["🟥","ما لون الراسب الذي يتشكّل عند كشف السكر بمحلول فهلينغ مع التسخين؟","أحمر آجري",["أبيض","أزرق بنفسجي","أصفر"],"الراسب الأحمر الآجري هو علامة وجود السكر."]
+];
+let exQ=[],exI=0,exAns=[],exLock=false,exT0=0,exSid="",exPayload=null,exActive=false;
+const exKey=()=>"exdone_"+ME.id;
+const exGet=()=>{try{return JSON.parse(localStorage.getItem(exKey())||"null")}catch(e){return null}};
+const exSet=d=>{try{localStorage.setItem(exKey(),JSON.stringify(d))}catch(e){}};
+function exBuild(){return shuffle(EX).slice(0,20).map(r=>{const [e,q,c,w,x]=r,id=EX.indexOf(r)+1;
+ if(typeof c==="boolean")return{id,e,q,o:["صح ✔","خطأ ✘"],a:c?0:1,x:w};
+ const o=shuffle([c,...w]);return{id,e,q,o,a:o.indexOf(c),x}})}
+/* التحقق من الشيت (محاولة واحدة حتى لو غيّر التلميذ جهازه) */
+function exCheck(){return new Promise(res=>{const cb="cb"+newId();let fin=false;const sc=document.createElement("script");
+ const f=v=>{if(fin)return;fin=true;try{delete window[cb]}catch(e){window[cb]=null}sc.remove();res(v)};
+ window[cb]=f;sc.onerror=()=>f(null);setTimeout(()=>f(null),4000);
+ sc.src=SHEET_URL+"?action=check&pid="+encodeURIComponent(ME.id)+"&cb="+cb;document.body.appendChild(sc)})}
+function exDoneView(d){go("exam");$("exq").classList.add("hid");$("exr").classList.remove("hid");
+ $("exstars").textContent="🔒";$("exti").textContent="أجريتَ الامتحان من قبل";$("exsc").textContent=d.score+" / "+(d.total||20);
+ $("exmsg").textContent="يُسمح بمحاولة واحدة فقط لكل تلميذ.";$("exsent").textContent="";$("exrev").innerHTML="";$("exresend").classList.add("hid")}
+async function startExam(){if(!ME)return;S.pop();
+ let d=exGet();
+ if(!d&&live){$("bExam").disabled=true;const r=await exCheck();$("bExam").disabled=false;if(r&&r.done){d={score:r.score,total:r.total};exSet(d)}}
+ if(d){exDoneView(d);return}
+ exQ=exBuild();exI=0;exAns=[];exT0=Date.now();exSid="ex"+newId();exActive=true;exSet({score:0,total:20});
+ $("exq").classList.remove("hid");$("exr").classList.add("hid");go("exam");exShow()}
+function exShow(){const q=exQ[exI];exLock=false;$("excount").textContent=(exI+1)+" / "+exQ.length;$("exprog").style.width=(exI/exQ.length*100)+"%";
+ $("exe").textContent=q.e;$("exqt").textContent=q.q;
+ $("exopts").innerHTML=q.o.map((t,k)=>`<button class="opt" data-k="${k}">${esc(t)}</button>`).join("");
+ document.querySelectorAll("#exopts .opt").forEach(b=>b.onclick=()=>exPick(+b.dataset.k,b));
+ $("exfb").classList.add("hid");$("exnext").classList.add("hid")}
+function exPick(k,b){if(exLock)return;exLock=true;const q=exQ[exI],bs=document.querySelectorAll("#exopts .opt");exAns[exI]=k;
+ if(k===q.a){S.ding();b.classList.add("ok");$("exfb").textContent="✅ صحيح!"}
+ else{S.buzz();b.classList.add("no");bs[q.a].classList.add("ok");$("exfb").textContent="❌ خطأ"}
+ $("exfb").classList.remove("hid");$("exnext").textContent=exI===exQ.length-1?"عرض النتيجة":"التالي";$("exnext").classList.remove("hid")}
+$("exnext").onclick=()=>{if(exI===exQ.length-1)exFinish();else{exI++;exShow()}};
+function exPost(beacon){if(!live||!exPayload)return;const body=JSON.stringify(exPayload);
+ try{if(beacon&&navigator.sendBeacon)navigator.sendBeacon(SHEET_URL,body);else fetch(SHEET_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body,keepalive:true})}catch(e){}}
+function exMake(){const wrong=exQ.map((q,k)=>({q,k})).filter(({q,k})=>exAns[k]!==q.a),score=exQ.length-wrong.length,total=exQ.length;
+ exPayload={type:"exam",sid:exSid,pid:ME.id,t:exT0,first:ME.first,last:ME.last,sec:ME.sec,score,total,secs:Math.round((Date.now()-exT0)/1000),ids:exQ.map(q=>q.id).join("-"),wrong:wrong.map(({q})=>q.id).join("-")};
+ exSet({score,total});return{wrong,score,total}}
+function exFinish(){const {wrong,score,total}=exMake();exActive=false;exPost();
+ $("exq").classList.add("hid");$("exr").classList.remove("hid");scrollTo(0,0);setTimeout(()=>score>=10?S.win():S.lose(),250);
+ const st=score>=17?3:score>=13?2:score>=10?1:0;
+ $("exstars").textContent="⭐".repeat(st)+"☆".repeat(3-st);
+ $("exti").textContent="انتهى الامتحان يا "+ME.first+"!";
+ $("exsc").textContent=score+" / "+total;
+ $("exmsg").textContent=score>=17?"ممتاز! أنت عالِم حقيقي 🎉":score>=13?"جيد جدًا! راجع الأخطاء أدناه.":score>=10?"حسن، راجع الدرس جيدًا.":"راجع الدرس جيدًا، ستنجح في المرة القادمة!";
+ $("exsent").textContent=live?"✅ تم إرسال نتيجتك إلى الأستاذ":"📋 لم يُفعَّل الإرسال، أخبر أستاذك بنتيجتك";
+ $("exresend").classList.toggle("hid",!live);
+ $("exrev").innerHTML=wrong.length?"<b>تصحيح الأخطاء:</b>"+wrong.map(({q})=>`<div class="fb">❌ ${esc(q.q)}<br>✅ الصحيح: <b>${esc(q.o[q.a])}</b><br>${esc(q.x)}</div>`).join(""):"<div class=\"fb\" style=\"background:#e3fbe9\">🎯 لا أخطاء! علامة كاملة.</div>"}
+$("exresend").onclick=()=>{exPost();$("exsent").textContent="✅ أُعيد إرسال نتيجتك"};
+$("exhome").onclick=home;
+$("exback").onclick=()=>{if(!exActive){home();return}if(confirm("الخروج الآن ينهي الامتحان ويسجَّل بما أجبتَ عنه فقط، ولا يمكنك إعادته. هل تخرج؟")){exMake();exActive=false;exPost();home()}};
+addEventListener("pagehide",()=>{if(exActive&&ME){exMake();exPost(true)}});
+$("bExam").onclick=startExam;
+if(ME)sync();
+home();
+</script>
+</body>
+</html>
